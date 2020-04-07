@@ -4,13 +4,20 @@
 <head>
 	<title>Sara Sampson</title>
 	<meta charset="utf-8" />
+	<meta name="description" content="Sara Sampson's Portfolio" />
+	<meta name="author" content="Sara Sampson" />
+	<!-- <link rel="icon" href="%PUBLIC_URL%/favicon.ico" /> -->
 	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 	<link rel="stylesheet" href="assets/css/main.css" />
 	<noscript>
 		<link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+
 </head>
 
 <body class="is-preload">
+	<!-- Scripts -->
+	<script src="assets/js/jquery.min.js"></script>
+
 
 	<!-- Wrapper -->
 	<div id="wrapper">
@@ -27,29 +34,105 @@
 		<nav id="menu">
 			<ul class="links">
 				<li><a href="index.html">Home</a></li>
-				<li><a href="landing.html">Landing</a></li>
+				<!-- <li><a href="landing.html">Landing</a></li> -->
 				<!-- <li><a href="generic.html">Generic</a></li> -->
 				<li><a href="#projects">Projects</a></li>
 				<li><a href="#skills">Skills</a></li>
-				
 				<li><a href="#contact">Contact</a></li>
 			</ul>
 			<ul class="actions stacked">
-				<li><a href="resume.html" class="button primary fit">Resume</a></li>
+				<li><a href="./assets/sampson_resume.pdf" class="button primary fit">My Resume</a></li>
 			</ul>
 		</nav>
 
 		<!-- Banner -->
 		<section id="banner" class="major">
+			<script>
+				(function ($) {
+					/*
+					 * TYPING ANIMATION
+					 */
+
+					let text = $(".changing-text");
+
+					if (text) {
+						const words = [
+							"building cool websites",
+							"solving problems",
+							"perfecting the details",
+							"writing elegant code",
+							"learning new things",
+						];
+
+						// Typing characters
+						function printChar(word) {
+							let i = 0;
+							text = $(".changing-text");
+							text.html("");
+
+							let id = setInterval(
+								() => {
+									if (i >= word.length) {
+										deleteChar();
+										clearInterval(id);
+									} else {
+										text.html(text.html() + word[i]);
+										i++;
+									}
+								},
+
+								90
+							);
+						}
+
+						// Backspace
+						function deleteChar() {
+							text = $(".changing-text");
+							let word = text.html();
+							let i = word.length - 1;
+
+							let id = setInterval(
+								() => {
+									if (i >= 0) {
+										text.html(text.html().substring(0, text.html().length - 1));
+										i--;
+									} else {
+										printChar(words[iter.next().value]);
+										clearInterval(id);
+									}
+								},
+
+								90
+							);
+						}
+
+						// Iterate through words using generator function
+						function* initTyping() {
+							let index = 0;
+
+							while (true) {
+								yield index++;
+								if (index > 4) index = 0;
+							}
+						}
+
+						let iter = initTyping();
+						printChar(words[iter.next().value]);
+					}
+				})(jQuery);
+			</script>
 			<div class="inner">
 				<header class="major">
-					<h1>Hi, my name is Forty</h1>
+					<section id="typing major">
+						<h1>
+							Hi, I'm Sara. <br />I love <span class="changing-text blue"> to code</span>.
+						</h1>
+					</section>
+
 				</header>
 				<div class="content">
-					<p>A responsive site template designed by HTML5 UP<br />
-						and released under the Creative Commons.</p>
 					<ul class="actions">
-						<li><a href="#one" class="button next scrolly">My Resume</a></li>
+						<li><a href="./assets/sampson_resume.pdf" class="button next scrolly">My Resume</a></li>
 					</ul>
 				</div>
 			</div>
@@ -59,6 +142,7 @@
 		<div id="main">
 
 			<!-- One -->
+			<!-- Projects -->
 			<section id="one" class="tiles">
 				<article>
 					<span class="image">
@@ -104,12 +188,15 @@
 					<header class="major">
 						<h2>Skills</h2>
 					</header>
-					<p>Nullam et orci eu lorem consequat tincidunt vivamus et sagittis libero. Mauris aliquet magna magna sed nunc
-						rhoncus pharetra. Pellentesque condimentum sem. In efficitur ligula tate urna. Maecenas laoreet massa vel
-						lacinia pellentesque lorem ipsum dolor. Nullam et orci eu lorem consequat tincidunt. Vivamus et sagittis
-						libero. Mauris aliquet magna magna sed nunc rhoncus amet pharetra et feugiat tempus.</p>
+					<p>Programming Languages: ​JavaScript, Ruby, SQL, R, Python
+						</br>
+						Web Development:​ ​Ruby on Rails, React.js, Redux.js, HTML5, CSS3, Sass, Git, Node.js, Express.js, jQuery,
+						AJAX,
+						Webpack, REST API
+						</br>
+						Other Proficiencies​:​ ​PostgreSQL, MongoDB, RSpec, TDD, JMP Pro, ImageJ, SolidWorks</p>
 					<ul class="actions">
-						<li><a href="landing.html" class="button next">My Resume</a></li>
+						<li><a href="./assets/sampson_resume.pdf" class="button next">My Resume</a></li>
 					</ul>
 				</div>
 			</section>
@@ -119,26 +206,26 @@
 		<!-- Contact -->
 		<section id="contact">
 			<div class="inner">
-					<form method="post" action="#">
-						<div class="fields">
-							<div class="field half">
-								<label for="name">Name</label>
-								<input type="text" name="name" id="name" />
-							</div>
-							<div class="field half">
-								<label for="email">Email</label>
-								<input type="text" name="email" id="email" />
-							</div>
-							<div class="field">
-								<label for="message">Message</label>
-								<textarea name="message" id="message" rows="6"></textarea>
-							</div>
+				<form method="post" action="#">
+					<div class="fields">
+						<div class="field half">
+							<label for="name">Name</label>
+							<input type="text" name="name" id="name" />
 						</div>
-						<ul class="actions">
-							<li><input type="submit" value="Send Message" class="primary" /></li>
-							<li><input type="reset" value="Clear" /></li>
-						</ul>
-					</form>
+						<div class="field half">
+							<label for="email">Email</label>
+							<input type="text" name="email" id="email" />
+						</div>
+						<div class="field">
+							<label for="message">Message</label>
+							<textarea name="message" id="message" rows="6"></textarea>
+						</div>
+					</div>
+					<ul class="actions">
+						<li><input type="submit" value="Send Message" class="primary" /></li>
+						<li><input type="reset" value="Clear" /></li>
+					</ul>
+				</form>
 			</div>
 		</section>
 
@@ -156,15 +243,12 @@
 
 	</div>
 
-	<!-- Scripts -->
-	<script src="assets/js/jquery.min.js"></script>
 	<script src="assets/js/jquery.scrolly.min.js"></script>
 	<script src="assets/js/jquery.scrollex.min.js"></script>
 	<script src="assets/js/browser.min.js"></script>
 	<script src="assets/js/breakpoints.min.js"></script>
 	<script src="assets/js/util.js"></script>
 	<script src="assets/js/main.js"></script>
-
 </body>
 
 </html>
