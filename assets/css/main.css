@@ -4089,3 +4089,7 @@ body.is-menu-visible #menu .inner {
 	opacity: 1;
 	visibility: visible;
 }
+
+.image > img {
+	border: 30px solid white;
+}
