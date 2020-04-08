@@ -1,5 +1,17 @@
 # Portfolio
 
+## Author: Sara Sampson
+
+## Outline
+
+* Banner
+  * Typing Animation
+* Projects
+* Skills
+  * Resume
+* Contact
+  * Links
+
 ## Credits
 
 * Forty by HTML5 UP:
