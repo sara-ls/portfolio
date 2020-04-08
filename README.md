@@ -1,13 +1,20 @@
-# Portfolio
+# My Portfolio
 
-## Author: Sara Sampson
+[https://sara-ls.github.io/portfolio/](https://sara-ls.github.io/portfolio/)
+
+## Sara Sampson
 
 ## Outline
 
 * Banner
   * Typing Animation
+  * Links
 * Projects
-* Skills
+* About
+  * Skills
+  * Education
+  * Publications
+  * Awards & Honors
   * Resume
 * Contact
   * Links
