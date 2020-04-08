@@ -10,3 +10,7 @@
 .image>img {
 	border: 30px solid white;
 }
+
+#contact span.icon {
+	font-size: 1.35em;
+}
