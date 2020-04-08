@@ -1,6 +1,6 @@
 # My Portfolio
 
-[https://sara-ls.github.io/portfolio/](https://sara-ls.github.io/portfolio/)
+[sarasampson.com](https://www.sarasampson.com/)
 
 ## Sara Sampson
 
