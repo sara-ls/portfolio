@@ -206,14 +206,6 @@
   color: #adb9ff;
 }
 
-#header.alt.style3 .logo strong {
-  color: #ec8d81;
-}
-
-#header.alt.style4 .logo strong {
-  color: #e7b788;
-}
-
 #header.alt.style5 .logo strong {
   color: #adb9ff;
 }
@@ -293,10 +285,6 @@ body.is-preload #header.alt {
 }
 
 @media screen and (max-width: 480px) {
-
-  #header .logo span {
-    display: none;
-  }
 
   #header nav a[href="#menu"] {
     overflow: hidden;
