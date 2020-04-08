@@ -4093,3 +4093,11 @@ body.is-menu-visible #menu .inner {
 .image > img {
 	border: 30px solid white;
 }
+
+@media screen and (max-width: 460px) {
+
+	section#typing h2:last-child {
+		min-height: 5em;
+	}
+
+}
