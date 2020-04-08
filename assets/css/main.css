@@ -4090,7 +4090,7 @@ body.is-menu-visible #menu .inner {
 	visibility: visible;
 }
 
-.image > img {
+.image>img {
 	border: 30px solid white;
 }
 
