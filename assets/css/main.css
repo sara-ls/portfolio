@@ -4079,6 +4079,10 @@ body.is-menu-visible #menu .inner {
 	visibility: visible;
 }
 
-#full-resume {
-	float: right;
+#nav-line {
+	height: 1px;
+	width: 100%;
+	position: absolute;
+	top: 60px;
+	background-image: linear-gradient(90deg, #92d0ff 20%, #88a9f7 50%, #a9d7ff);
 }
