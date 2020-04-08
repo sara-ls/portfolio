@@ -21,13 +21,14 @@ $font: (family: ('Source Sans Pro', Helvetica, sans-serif),
 	letter-spacing-alt: 0.25em);
 
 // Palette.
-$palette: (bg: #242943,
+$palette: (
+	bg: #242943,
 	bg-alt: #2a2f4a,
 	fg: #ffffff,
 	fg-bold: #ffffff,
-	fg-light: rgba(244, 244, 255, 0.2),
+	fg-light: rgba(244, 244, 255, 0.3),
 	border: rgba(212, 212, 255, 0.1),
-	border-bg: rgba(212, 212, 255, 0.035),
+	border-bg: rgba(212, 212, 255, 0.2),
 	highlight: #a6f3ff,
 	accent1: #a9d7ff,
 	accent2: #adb9ff,
