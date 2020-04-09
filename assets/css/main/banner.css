@@ -106,7 +106,7 @@
 }
 
 #banner.major {
-  height: 75vh;
+  height: 60vh;
   min-height: 30em;
   max-height: 50em;
 }
@@ -206,7 +206,7 @@ body.is-preload #banner>.inner {
   }
 
   #banner.major {
-    padding: 8em 0 4em 0;
+    padding: 6em 0 1em 0;
   }
 
   /* Increase height of typing section on mobile */
