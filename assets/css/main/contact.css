@@ -80,3 +80,15 @@
 #contact span.icon {
   font-size: 1.35em;
 }
+#contact .methods {
+  display: flex;
+  justify-content: space-between;
+}
+
+@media screen and (max-width: 480px) {
+
+#contact .methods {
+  display: block;
+}
+
+}

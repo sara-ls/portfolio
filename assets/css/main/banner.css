@@ -188,7 +188,7 @@ body.is-preload #banner>.inner {
   }
 
   #banner.major {
-    height: auto;
+    height: 100vh;
     min-height: 0;
     max-height: none;
   }

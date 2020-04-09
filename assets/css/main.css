@@ -14,19 +14,24 @@
 	border: 30px solid white;
 }
 
-
 /* Skills */
 #skills {
 	background-color: rgb(51, 56, 86);
+}
+
+#skills dl * {
+	font-size: 1.1em;
+	margin-bottom: 0.8em;
 }
 
 #skills-icons {
 	display: grid;
 	grid-template-columns: repeat(10, 1fr);
 	grid-template-rows: 4em;
-	margin-bottom: 1em;
+	margin-bottom: 1.5em;
 	align-items: center;
 	justify-items: center;
+
 }
 
 #skills-icons span.icon {
