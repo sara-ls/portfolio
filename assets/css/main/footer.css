@@ -1,4 +1,7 @@
 /* Footer */
+#footer {
+  background-color: #2a2f4a;
+}
 
 #footer .copyright {
   font-size: 0.7em;
