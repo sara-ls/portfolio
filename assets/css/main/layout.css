@@ -2387,9 +2387,11 @@ table.alt tfoot {
   background-position: center center;
   background-size: cover;
   border-radius: 0;
-  display: block;
+  display: flex;
   position: relative;
   width: 30%;
+  background-color: white;
+  align-items: center;
 }
 
 .spotlights>section>.image img {

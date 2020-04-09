@@ -243,7 +243,7 @@ body.is-preload #header.alt {
 }
 
 #nav-line {
-  height: 1px;
+  height: 2px;
   width: 100%;
   position: absolute;
   top: 3.25em;
