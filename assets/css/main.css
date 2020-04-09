@@ -16,6 +16,9 @@
 
 
 /* Skills */
+#skills {
+	background-color: rgb(51, 56, 86);
+}
 
 #skills-icons {
 	display: grid;
@@ -29,6 +32,7 @@
 #skills-icons span.icon {
 	font-size: 3em;
 	margin: .1em;
+	filter: grayscale(1) brightness(10);
 }
 
 @media screen and (max-width: 480px) {
