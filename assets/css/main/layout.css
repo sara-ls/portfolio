@@ -701,14 +701,6 @@ hr.major {
 
 }
 
-#nav-line {
-  height: 1px;
-  width: 100%;
-  position: absolute;
-  top: 3.25em;
-  background-image: linear-gradient(90deg, #92d0ff 20%, #88a9f7 50%, #a9d7ff);
-}
-
 @media screen and (max-width: 1280px) {
 
   .row {

@@ -72,7 +72,7 @@
 #header .logo {
   border: 0;
   display: inline-block;
-  font-size: 0.8em;
+  font-size: 0.95em;
   height: inherit;
   line-height: inherit;
   padding: 0 1.5em;
@@ -119,7 +119,7 @@
 #header nav a {
   border: 0;
   display: block;
-  font-size: 0.8em;
+  font-size: 0.95em;
   height: inherit;
   line-height: inherit;
   padding: 0 0.75em;
@@ -240,6 +240,14 @@ body.is-preload #header.alt {
     padding-right: 4.5em !important;
   }
 
+}
+
+#nav-line {
+  height: 1px;
+  width: 100%;
+  position: absolute;
+  top: 3.25em;
+  background-image: linear-gradient(90deg, #c5e0f5 20%, #d5e2ff 50%, #c4e2fc);
 }
 
 @media screen and (max-width: 736px) {
