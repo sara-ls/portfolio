@@ -19,8 +19,9 @@
 #skills-icons {
 	display: grid;
 	grid-template-columns: repeat(10, 1fr);
-	grid-template-rows: 5em;
+	grid-template-rows: 4em;
 	margin-bottom: 1em;
+	align-items: center;
 	justify-items: center;
 }
 
@@ -33,7 +34,13 @@
 	#skills-icons {
 		grid-template-columns: repeat(5, 1fr);
 	}
+
 	#skills-icons span.icon {
 		font-size: 2.5em;
 	}
+
+	.awards-container span {
+		display: none;
+	}
 }
+
