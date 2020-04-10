@@ -1,0 +1,120 @@
+/* Icon */
+
+.icon {
+  text-decoration: none;
+  border-bottom: none;
+  position: relative;
+}
+
+.icon:before {
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  display: inline-block;
+  font-style: normal;
+  font-variant: normal;
+  text-rendering: auto;
+  line-height: 1;
+  text-transform: none !important;
+  font-family: 'Font Awesome 5 Free';
+  font-weight: 400;
+}
+
+.icon>.label {
+  display: none;
+}
+
+.icon:before {
+  line-height: inherit;
+}
+
+.icon.solid:before {
+  font-weight: 900;
+}
+
+.icon.brands:before {
+  font-family: 'Font Awesome 5 Brands';
+}
+
+.icon.alt:before {
+  background-color: #ffffff;
+  border-radius: 100%;
+  color: #242943;
+  display: inline-block;
+  height: 2em;
+  line-height: 2em;
+  text-align: center;
+  width: 2em;
+}
+
+a.icon.alt:before {
+  -moz-transition: background-color 0.2s ease-in-out;
+  -webkit-transition: background-color 0.2s ease-in-out;
+  -ms-transition: background-color 0.2s ease-in-out;
+  transition: background-color 0.2s ease-in-out;
+}
+
+a.icon.alt:hover:before {
+  background-color: #c3e4fe;
+}
+
+a.icon.alt:active:before {
+  background-color: #c3e4fe;
+}
+
+
+
+ul.icons li:hover a.icon:before {
+  animation: bounce 1.5s infinite; 
+  -webkit-animation: bounce 1.5s infinite; 
+  -moz-animation: bounce 1.5s infinite;
+  -o-animation: bounce 1.5s infinite; 
+}
+
+/* CSS3 Bounce Animation */
+@-webkit-keyframes bounce {
+
+  0%,
+  100% {
+    -webkit-transform: translateY(0);
+  }
+
+  50% {
+    -webkit-transform: translateY(-8px);
+  }
+}
+
+@-moz-keyframes bounce {
+
+  0%,
+  100% {
+    -moz-transform: translateY(0);
+  }
+
+  60% {
+    -moz-transform: translateY(-8px);
+  }
+}
+
+@-o-keyframes bounce {
+
+  0%,
+  100% {
+    -o-transform: translateY(0);
+  }
+
+  60% {
+    -o-transform: translateY(-8px);
+  }
+}
+
+@keyframes bounce {
+
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  60% {
+    transform: translateY(-8px);
+  }
+}
