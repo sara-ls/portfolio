@@ -10,6 +10,8 @@
 		content="Sara Lim Sampson, sarasampson, Sampson, portfolio, software engineer, React, web developer, UC Berkeley Engineering" />
 	<meta name="viewport" content="width=device-width, initial-scale=1" />
 	<meta name="theme-color" content="#2a2f4a" />
+	<script src="assets/js/jquery.min.js"></script>
+	<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@2.4.1/dist/email.min.js"></script>
 	<link rel="stylesheet" href="./assets/css/main.css" />
 	<noscript>
 		<link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
@@ -17,8 +19,7 @@
 	<link rel="icon" type="image/png" sizes="32x32" href="./favicon_io/favicon-32x32.png">
 	<link rel="icon" type="image/png" sizes="16x16" href="./favicon_io/favicon-16x16.png">
 	<link rel="manifest" href="./favicon_io/site.webmanifest">
-	<script src="assets/js/jquery.min.js"></script>
-	<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@2.4.1/dist/email.min.js"></script>
+
 </head>
 
 <body class="is-preload">
@@ -354,22 +355,36 @@
 			(function () {
 				emailjs.init('user_0Bx8qo3Bw7YjKUR32JL6e');
 			})();
+		</script>
+		<script type="text/javascript">
 			window.onload = function () {
 				document.getElementById('contact-form').addEventListener('submit', function (event) {
 					event.preventDefault();
 					// generate the contact number value
 					this.contact_number.value = Math.random() * 100000 | 0;
 
-					emailjs.sendForm('gmail', 'template_dZ2UCGgi', this)
+					let templateparams = {
+						name: document.querySelector('#input-name').value,
+						email: document.querySelector('#input-email').value,
+						message: document.querySelector('#msg-input').value
+					}
+
+					emailjs.send('gmail', 'template_dZ2UCGgi', templateparams)
 						.then(function (response) {
 							// Show that message was successfully sent
-							console.log('SUCCESS!', response.status, response.text);
+							document.getElementById('contact-form').reset();
+							document.getElementById('contact-submit').value = "Sent!";
+
+							document.getElementById('contact-submit').setAttribute('disabled', 'true')
+							setTimeout(() => {
+								document.getElementById('contact-submit').removeAttribute('disabled')
+							}, 2000)
+							document.getElementById('msg-input').classList.remove("expanded")
 						}, function (error) {
 							// Show Error
 							console.log('FAILED...', error);
 						});
 				});
-
 				document.getElementById('msg-input').addEventListener('click', e => {
 					e.preventDefault();
 					e.currentTarget.classList.add("expanded");
@@ -384,19 +399,19 @@
 						<input type="hidden" name="contact_number">
 						<div class="field half">
 							<label>Name</label>
-							<input type="text" name="user_name">
+							<input type="text" name="user_name" id="input-name" required>
 						</div>
 						<div class="field half">
 							<label>Email</label>
-							<input type="email" name="user_email">
+							<input type="email" name="user_email" id="input-email" required>
 						</div>
 						<div class="field">
 							<label>Message</label>
-							<textarea id="msg-input" name="message"></textarea>
+							<textarea id="msg-input" name="message" id="input-msg" required></textarea>
 						</div>
 					</div>
 					<ul class="actions">
-						<li><input type="submit" value="Send message" class="primary" /></li>
+						<li><input type="submit" id="contact-submit" value="Send message" class="primary" /></li>
 						<li><input type="reset" value="Clear" /></li>
 					</ul>
 				</form>
