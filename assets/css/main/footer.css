@@ -4,7 +4,8 @@
 }
 
 #footer .copyright * {
-  color: rgb(155, 155, 155);
+  color: white;
+  font-size: 0.9em;
 }
 
 #footer .copyright {
