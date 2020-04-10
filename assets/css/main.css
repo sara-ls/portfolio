@@ -41,7 +41,7 @@
 	filter: grayscale(1) brightness(10);
 }
 
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 550px) {
 	#skills-icons {
 		grid-template-columns: repeat(5, 1fr);
 	}
