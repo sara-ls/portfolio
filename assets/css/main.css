@@ -9,6 +9,7 @@
 @import url("./main/button.css");
 @import url("./main/footer.css");
 @import url("./main/contact.css");
+@import url("./main/form.css");
 
 /* Add border around project images */
 .image>img {
@@ -53,4 +54,8 @@
 	.awards-container span {
 		display: none;
 	}
+}
+
+#about {
+	background-color: #566996;
 }
