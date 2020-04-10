@@ -223,9 +223,17 @@ body.is-preload #banner>.inner {
     flex-direction: column;
   }
 
-  #banner  .actions {
+  #banner .icons {
+    display: flex;
+    width: 70vw;
+    justify-content: space-between;
+  }
+
+
+  #banner .actions {
     margin-left: 0;
   }
+
   #banner li {
     padding-left: 0;
   }
