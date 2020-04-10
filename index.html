@@ -40,7 +40,7 @@
 		<!-- Menu -->
 		<nav id="menu">
 			<img src="images/headshot_circle.png" alt="sara-headshot"
-				style="width: 120px; height: 120px; margin-bottom: 20px; filter: brightness(0.9);">
+				style="width: 120px; height: 120px; margin-bottom: 20px; filter: brightness(1.05);">
 			<ul class="links">
 				<li><a href="#">Home</a></li>
 				<li><a href="#skills">Skills</a></li>
@@ -374,7 +374,6 @@
 							// Show that message was successfully sent
 							document.getElementById('contact-form').reset();
 							document.getElementById('contact-submit').value = "Sent!";
-
 							document.getElementById('contact-submit').setAttribute('disabled', 'true')
 							setTimeout(() => {
 								document.getElementById('contact-submit').removeAttribute('disabled')

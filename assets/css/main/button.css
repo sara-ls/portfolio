@@ -32,6 +32,10 @@ button,
   white-space: nowrap;
 }
 
+input:focus {
+  outline: none;
+}
+
 input[type="submit"]:hover,
 input[type="submit"]:active,
 input[type="reset"]:hover,
@@ -44,6 +48,7 @@ button:active,
 .button:active {
   box-shadow: inset 0 0 0 2px #9bf1ff;
   color: #9bf1ff;
+  outline: none;
 }
 
 input[type="submit"]:active,
@@ -54,6 +59,7 @@ button:active,
   background-color: rgba(155, 241, 255, 0.1);
   box-shadow: inset 0 0 0 2px #53e3fb;
   color: #53e3fb;
+  outline: none;
 }
 
 input[type="submit"].icon:before,
@@ -198,6 +204,7 @@ input[type="button"].primary:active,
 button.primary:active,
 .button.primary:active {
   background-color: #53e3fb;
+  outline: none;
 }
 
 input[type="submit"].disabled,
@@ -213,4 +220,5 @@ button:disabled,
   pointer-events: none;
   cursor: default;
   opacity: 0.25;
+  outline: none;
 }
