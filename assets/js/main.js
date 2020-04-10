@@ -282,5 +282,4 @@
       // Hide on escape.
       if (event.keyCode == 27) $menu._hide();
     });
-
 })(jQuery);

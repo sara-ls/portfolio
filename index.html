@@ -18,6 +18,7 @@
 	<link rel="icon" type="image/png" sizes="16x16" href="./favicon_io/favicon-16x16.png">
 	<link rel="manifest" href="./favicon_io/site.webmanifest">
 	<script src="assets/js/jquery.min.js"></script>
+	<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@2.4.1/dist/email.min.js"></script>
 </head>
 
 <body class="is-preload">
@@ -179,7 +180,7 @@
 						</dt>
 						<dd>
 							<p>Ruby on Rails, React.js, Redux.js, HTML5, CSS3, Sass, Node.js,
-								Express.js, jQuery, AJAX, Webpack, AWS S3, REST API</p>
+								Express.js, jQuery, AJAX, Webpack, REST API</p>
 						</dd>
 						<dt>Other Proficiencies
 						</dt>
@@ -349,7 +350,6 @@
 		</section>-->
 
 		<!-- Contact -->
-		<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@2.4.1/dist/email.min.js"></script>
 		<script type="text/javascript">
 			(function () {
 				emailjs.init('user_0Bx8qo3Bw7YjKUR32JL6e');
@@ -369,12 +369,17 @@
 							console.log('FAILED...', error);
 						});
 				});
+
+				document.getElementById('msg-input').addEventListener('click', e => {
+					e.preventDefault();
+					e.currentTarget.classList.add("expanded");
+				})
 			}
 		</script>
 		<section id="contact">
 			<div class="inner">
 				<form id="contact-form">
-					<h2>Get in Touch</h2>
+					<h2><span class="icon solid fa-paper-plane"></span>Get in Touch</h2>
 					<div class="fields">
 						<input type="hidden" name="contact_number">
 						<div class="field half">
@@ -387,11 +392,11 @@
 						</div>
 						<div class="field">
 							<label>Message</label>
-							<textarea name="message"></textarea>
+							<textarea id="msg-input" name="message"></textarea>
 						</div>
 					</div>
 					<ul class="actions">
-						<li><input type="submit" value="Send" class="primary" /></li>
+						<li><input type="submit" value="Send message" class="primary" /></li>
 						<li><input type="reset" value="Clear" /></li>
 					</ul>
 				</form>

@@ -78,17 +78,14 @@
 }
 
 #contact span.icon {
-  font-size: 1.35em;
-}
-#contact .methods {
-  display: flex;
-  justify-content: space-between;
+  margin-right: 10px;
 }
 
-@media screen and (max-width: 480px) {
-
-#contact .methods {
-  display: block;
+#msg-input {
+  height: 100px;
+  transition: height 1s linear;
 }
 
+#msg-input.expanded {
+  height: 180px;
 }
