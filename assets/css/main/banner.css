@@ -155,6 +155,10 @@ body.is-preload #banner>.inner {
   opacity: 0;
 }
 
+#banner .actions {
+  margin-left: 30px;
+}
+
 @media screen and (max-width: 1280px) {
 
   #banner {
@@ -214,4 +218,15 @@ body.is-preload #banner>.inner {
     min-height: 5em;
   }
 
+  #banner .content {
+    display: flex;
+    flex-direction: column;
+  }
+
+  #banner  .actions {
+    margin-left: 0;
+  }
+  #banner li {
+    padding-left: 0;
+  }
 }
