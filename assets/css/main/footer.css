@@ -3,9 +3,8 @@
   background-color: #323753;
 }
 
-#footer ..copyright * {
-  color: rgb(141, 141, 141);
-    font-size: 0.9em;
+#footer .copyright * {
+  color: rgb(155, 155, 155);
 }
 
 #footer .copyright {
