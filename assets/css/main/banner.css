@@ -122,13 +122,6 @@
   background-color: #adb9ff;
 }
 
-
-
-#banner.style5:after {
-  background-color: #8ea9e8;
-}
-
-
 body.is-preload #banner:after {
   opacity: 1.0;
 }
@@ -138,10 +131,10 @@ body.is-preload #banner>.inner {
   -webkit-filter: blur(0.1em);
   -ms-filter: blur(0.1em);
   filter: blur(0.1em);
-  -moz-transform: translateX(-0.6em);
-  -webkit-transform: translateX(-0.6em);
-  -ms-transform: translateX(-0.6em);
-  transform: translateX(-0.6em);
+  -moz-transform: translateX(-1em);
+  -webkit-transform: translateX(-1em);
+  -ms-transform: translateX(-1em);
+  transform: translateX(-1em);
   opacity: 0;
 }
 
@@ -157,7 +150,7 @@ body.is-preload #banner>.inner {
 
 }
 
-@media screen and (max-width: 736px) {
+@media screen and (max-width: 818px) {
 
   #banner {
     padding: 5em 0 1em 0;
@@ -166,6 +159,11 @@ body.is-preload #banner>.inner {
     max-height: none;
     min-height: 0;
     top: -2.75em;
+  }
+
+  /* Increase height of typing section on mobile */
+  section#typing h2:last-child {
+    min-height: 5em;
   }
 
   #banner h1 {
@@ -200,11 +198,6 @@ body.is-preload #banner>.inner {
 
   #banner.major {
     padding: 6em 0 1em 0;
-  }
-
-  /* Increase height of typing section on mobile */
-  section#typing h2:last-child {
-    min-height: 5em;
   }
 
   #banner .content {
