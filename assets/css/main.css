@@ -39,6 +39,11 @@
 
 }
 
+#skills dl dt {
+	font-size: 1.2em;
+	-webkit-font-smoothing: antialiased;
+}
+
 #skills-icons span.icon {
 	font-size: 3em;
 	margin: .1em;
