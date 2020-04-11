@@ -107,7 +107,7 @@
 
 #banner.major {
   min-height: 100vh;
-  max-height: 100vh;
+  height: 600px;
 }
 
 #banner.major.alt {
