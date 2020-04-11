@@ -39,13 +39,24 @@ textarea {
 
 }
 
-@media screen and (max-width: 360px) {
+@media screen and (max-width: 500px) {
 
   body,
   input,
   select,
   textarea {
     font-size: 12pt;
+  }
+
+}
+
+@media screen and (max-width: 380px) {
+
+  body,
+  input,
+  select,
+  textarea {
+    font-size: 11pt;
   }
 
 }
@@ -2481,7 +2492,7 @@ table.alt tfoot {
   text-align: right;
   text-indent: 8em;
   top: 0;
-  vertical-align: middle;
+
   white-space: nowrap;
   width: 8em;
 }
