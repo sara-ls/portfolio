@@ -19,6 +19,7 @@ textarea {
 }
 
 @media screen and (max-width: 1680px) {
+
   body,
   input,
   select,
@@ -59,7 +60,28 @@ textarea {
     font-size: 11pt;
   }
 
+  input[type="submit"].primary,
+  input[type="reset"].primary,
+  input[type="button"].primary,
+  a.button,
+  button.primary,
+  .button.primary {
+    font-size: 10pt;
+    padding: 0 1.2em;
+  }
+
 }
+
+@media screen and (max-width: 360px) {
+
+  input,
+  select,
+  textarea {
+    font-size: 10pt;
+  }
+
+}
+
 
 a {
   -moz-transition: color 0.2s ease-in-out, border-bottom-color 0.2s ease-in-out;
@@ -2553,4 +2575,3 @@ body.is-menu-visible #menu .inner {
   opacity: 1;
   visibility: visible;
 }
-
