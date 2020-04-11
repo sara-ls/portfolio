@@ -222,3 +222,8 @@ button:disabled,
   opacity: 0.25;
   outline: none;
 }
+
+input[type="submit"]:disabled {
+  background-color: #9bf1ff;
+  opacity: 1;
+}
