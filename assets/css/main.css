@@ -13,6 +13,7 @@
 @import url("./main/footer.css");
 @import url("./main/contact.css");
 @import url("./main/form.css");
+@import url("./main/carousel.css");
 
 /* Add border around project images */
 .image>img {
