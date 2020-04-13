@@ -31,12 +31,21 @@
 
 #skills-icons {
 	display: grid;
-	grid-template-columns: repeat(10, 1fr);
+	grid-template-columns: repeat(12, 1fr);
 	grid-template-rows: 4em;
 	margin-bottom: 1.5em;
 	align-items: center;
 	justify-items: center;
 
+}
+
+#skills-icons svg {
+	width: 80%;
+}
+
+
+#skills-icons path {
+	fill: white;
 }
 
 #skills dl dt {
@@ -50,12 +59,14 @@
 	filter: grayscale(1) brightness(10);
 }
 
-@media screen and (max-width: 650px) {
+@media screen and (max-width: 750px) {
 	#skills-icons {
-		grid-template-columns: repeat(5, 1fr);
+		grid-template-columns: repeat(6, 1fr);
+		grid-row-gap: 10px;
 	}
 
-	#skills-icons span.icon {
+	#skills-icons span.icon,
+	#skills-icons svg {
 		font-size: 2.5em;
 	}
 
