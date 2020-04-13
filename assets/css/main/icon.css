@@ -23,6 +23,10 @@
   display: none;
 }
 
+svg#rails-icon path {
+  fill: white;
+}
+
 .icon:before {
   line-height: inherit;
 }
@@ -64,10 +68,10 @@ a.icon.alt:active:before {
 
 
 ul.icons li:hover a.icon:before {
-  animation: bounce 1.5s infinite; 
-  -webkit-animation: bounce 1.5s infinite; 
+  animation: bounce 1.5s infinite;
+  -webkit-animation: bounce 1.5s infinite;
   -moz-animation: bounce 1.5s infinite;
-  -o-animation: bounce 1.5s infinite; 
+  -o-animation: bounce 1.5s infinite;
 }
 
 /* CSS3 Bounce Animation */
