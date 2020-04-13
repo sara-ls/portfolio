@@ -129,12 +129,19 @@
   }
 
   .spotlights>section>.carousel {
-    height: 400px;
+    max-height: 400px;
+  
   }
 
 
   .carousel-item.active {
     position: relative;
+  }
+
+  .carousel-item.active img {
+
+    max-height: 350px;
+    max-width: 400px;
   }
 
   .spotlights>section>.content {
