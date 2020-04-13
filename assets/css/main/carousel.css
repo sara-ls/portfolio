@@ -116,6 +116,11 @@
   position: relative;
 }
 
+.carousel__arrow:hover {
+  color: #9bf1ff;
+}
+
+
 .carousel__arrow:nth-child(1):after {
   content: "";
   right: -3px;
@@ -151,4 +156,9 @@
 .active .carousel-item__image {
   transition: 0.6s transform ease-in;
   transform: translateX(0);
+}
+
+.active .button:hover {
+  border: 2px solid #9bf1ff;
+  box-shadow: none;
 }
