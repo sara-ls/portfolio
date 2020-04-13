@@ -15,6 +15,35 @@
     xxsmall: [null, "360px"],
   });
 
+  // Carousel
+  $(".carousel-item").eq(0).addClass("active");
+  var total = $(".carousel-item").length;
+  var current = 0;
+  $("#moveRight").on("click", function () {
+    var next = current;
+    current = current + 1;
+    setSlide(next, current);
+  });
+  $("#moveLeft").on("click", function () {
+    var prev = current;
+    current = current - 1;
+    setSlide(prev, current);
+  });
+
+  function setSlide(prev, next) {
+    var slide = current;
+    if (next > total - 1) {
+      slide = 0;
+      current = 0;
+    }
+    if (next < 0) {
+      slide = total - 1;
+      current = total - 1;
+    }
+    $(".carousel-item").eq(prev).removeClass("active");
+    $(".carousel-item").eq(slide).addClass("active");
+    setTimeout(function () {}, 800);
+  }
   /**
    * Applies parallax scrolling to an element's background image.
    * @return {jQuery} jQuery object.
@@ -80,14 +109,14 @@
           return $(this);
         };
 
-  // Play initial animations on page load.
+  // Play initial animations on page load
   $window.on("load", function () {
     window.setTimeout(function () {
       $body.removeClass("is-preload");
     }, 100);
   });
 
-  // Clear transitioning state on unload/hide.
+  // Clear transitioning state on unload/hide
   $window.on("unload pagehide", function () {
     window.setTimeout(function () {
       $(".is-transitioning").removeClass("is-transitioning");
@@ -271,15 +300,15 @@
       event.stopPropagation();
       event.preventDefault();
 
-      // Toggle.
+      // Toggle
       $menu._toggle();
     })
     .on("click", function (event) {
-      // Hide.
+      // Hide
       $menu._hide();
     })
     .on("keydown", function (event) {
-      // Hide on escape.
+      // Hide on escape
       if (event.keyCode == 27) $menu._hide();
     });
 })(jQuery);
