@@ -8,14 +8,12 @@
   justify-content: center;
   -webkit-justify-content: center;
   -webkit-align-items: center;
-  max-width: 900px;
-  max-height: 550px;
   overflow: hidden;
   top: 0;
   left: 0;
   background-position: center center;
   background-size: cover;
-  background-color: white;
+  background-color: #fff;
   align-items: center;
 }
 
@@ -24,7 +22,6 @@
   display: flex;
   flex-direction: column-reverse;
   width: 100%;
-  height: 100%;
   align-items: center;
   justify-content: flex-start;
   -webkit-align-items: center;
@@ -40,17 +37,18 @@
 
 .carousel-item__info>div {
   display: flex;
+  flex-direction: column;
   justify-content: space-between;
-
+  align-items: center;
   display: -webkit-flex;
   -webkit-justify-content: space-between;
   margin: auto;
   height: 1.5em;
   width: 100%;
+  padding: 30px 5px 5px 5px;
 }
 
 .carousel-item__image {
-  width: 80%;
   height: 100%;
   order: 1;
   align-self: center;
@@ -62,47 +60,33 @@
   background-repeat: no-repeat;
   background-size: cover;
   position: relative;
-  /* transform: translateX(100%); */
+  transform: translateX(100%);
   transition: 0.6s all ease-in-out;
+}
+
+.carousel-item__image img {
+  max-width: 100%;
+  padding: 20px;
+  visibility: hidden;
 }
 
 .carousel-item__subtitle {
   font-family: "Open Sans", sans-serif;
-  letter-spacing: 3px;
-  font-size: 10px;
-  text-transform: uppercase;
-  margin: 0;
-  color: #7e7e7e;
-  font-weight: 700;
+  font-size: 0.7em;
+  margin: 10px;
+  font-weight: 400;
+  color: black;
   transform: translateY(25%);
   opacity: 0;
   visibility: hidden;
   transition: 0.4s all ease-in-out;
 }
 
-.carousel-item--1 .carousel-item__image {
-  background-image: url("https://images.pexels.com/photos/991012/pexels-photo-991012.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940");
-}
-
-.carousel-item--2 .carousel-item__image {
-  background-image: url("https://images.pexels.com/photos/921294/pexels-photo-921294.png?auto=compress&cs=tinysrgb&h=750&w=1260");
-}
-
-.carousel-item--3 .carousel-item__image {
-  background-image: url("https://images.pexels.com/photos/92733/pexels-photo-92733.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260");
-}
-
-
 .carousel-item__btn {
-  width: 35%;
-  color: #2c2c2c;
-  font-family: "Open Sans", sans-serif;
-  letter-spacing: 3px;
-  font-size: 11px;
-  text-transform: uppercase;
-  margin: 0;
-  width: 35%;
-  font-weight: 700;
+
+  color: black;
+  border: 2px solid;
+  margin: 5px;
   text-decoration: none;
   transform: translateY(25%);
   opacity: 0;
@@ -112,10 +96,13 @@
 
 .carousel__nav {
   position: absolute;
+  top: 0;
   right: calc(50% - 20px);
   z-index: 2;
+  height: 20px;
   background-color: #fff;
   bottom: calc(50% - 20px);
+  color: black;
 }
 
 .carousel__icon {
@@ -145,6 +132,11 @@
 .active {
   z-index: 1;
   display: flex;
+  visibility: visible;
+}
+
+.active img {
+
   visibility: visible;
 }
 
