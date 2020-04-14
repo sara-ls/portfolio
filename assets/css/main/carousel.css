@@ -162,3 +162,20 @@
   border: 2px solid #9bf1ff;
   box-shadow: none;
 }
+
+@media all and (min-width: 1350px) {
+  .carousel-item.active img {
+
+    max-height: 65%;
+  }
+}
+
+@media all and (min-width: 1850px) {
+  .carousel-item.active img {
+
+    max-height: 20vw;
+    width: auto;
+    max-width: 25vw;
+  }
+
+}
