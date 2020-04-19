@@ -27,7 +27,7 @@
 * Email JS
 * GitHub pages, Google domains
 
-## Credits
+## Credits/Libraries
 
 * [Unsplash](unsplash.com)
 * [Font Awesome](fontawesome.io)
