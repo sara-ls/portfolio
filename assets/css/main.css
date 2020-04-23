@@ -82,4 +82,13 @@
 
 #about {
 	background-color: #323753;
+
+
+}
+
+#about p>span {
+
+	display: inline-block;
+	margin-top: 4px;
+
 }
