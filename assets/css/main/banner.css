@@ -199,9 +199,10 @@ body.is-preload #banner>.inner {
 }
 
 @media screen and (max-width: 480px) {
- #banner ul.actions li:first-child {
-  display: none;
- }
+  #banner ul.actions li:first-child {
+    display: none;
+  }
+
   #banner {
     padding: 6em 0 2em 0;
   }
