@@ -161,3 +161,10 @@
   }
 
 }
+
+@media screen and (max-width: 440px) {
+  #skills ul.actions li:last-child {
+    display: none;
+  }
+
+}
