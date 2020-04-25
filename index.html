@@ -18,7 +18,7 @@
 
 	<meta property="og:title" content="sarasampson.com" />
 	<meta property="og:description" content="Sara Sampson - Portfolio" />
-	<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@2.4.1/dist/email.min.js"></script>
+
 	<link rel="stylesheet" href="./assets/css/main.css" />
 	<noscript>
 		<link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
@@ -26,19 +26,6 @@
 	<link rel="icon" type="image/png" sizes="32x32" href="./favicon_io/favicon-32x32.png">
 	<link rel="icon" type="image/png" sizes="16x16" href="./favicon_io/favicon-16x16.png">
 	<link rel="manifest" href="./favicon_io/site.webmanifest">
-	<link rel="preconnect dns-prefetch" href="https://www.google-analytics.com" crossorigin>
-	<!-- Global site tag (gtag.js) - Google Analytics -->
-	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-163782526-1"></script>
-	<script>
-		window.dataLayer = window.dataLayer || [];
-
-		function gtag() {
-			dataLayer.push(arguments);
-		}
-		gtag('js', new Date());
-
-		gtag('config', 'UA-163782526-1');
-	</script>
 
 	<script src="assets/js/jquery.min.js"></script>
 </head>
@@ -77,74 +64,7 @@
 		<!-- Banner -->
 		<section id="banner" class="major style1">
 
-			<script>
-				(function ($) {
 
-					/*
-					 * TYPING ANIMATION
-					 */
-					let text = $(".changing-text");
-					if (text) {
-						const words = [
-							"building cool websites.",
-							"learning new things.",
-							"perfecting the details.",
-							"solving problems.",
-						];
-
-						// Typing characters
-						function printChar(word) {
-							let i = 0;
-							text = $(".changing-text");
-							text.html("");
-							let id = setInterval(
-								() => {
-									if (i >= word.length) {
-										deleteChar();
-										clearInterval(id);
-									} else {
-										text.html(text.html() + word[i]);
-										i++;
-									}
-								},
-								80
-							);
-						}
-
-						// Backspace
-						function deleteChar() {
-							text = $(".changing-text");
-							let word = text.html();
-							let i = word.length - 1;
-
-							let id = setInterval(
-								() => {
-									if (i >= 0) {
-										text.html(text.html().substring(0, text.html().length - 1));
-										i--;
-									} else {
-										printChar(words[iter.next().value]);
-										clearInterval(id);
-									}
-								},
-
-								90
-							);
-						}
-
-						// Iterate through words using generator function
-						function* initTyping() {
-							let index = 0;
-							while (true) {
-								yield index++;
-								if (index > 3) index = 0;
-							}
-						}
-						let iter = initTyping();
-						printChar(words[iter.next().value]);
-					}
-				})(jQuery);
-			</script>
 			<div class="inner">
 
 				<header class="major">
@@ -622,45 +542,6 @@
 		</section>-->
 
 			<!-- Contact -->
-			<script type="text/javascript">
-				(function () {
-					emailjs.init('user_0Bx8qo3Bw7YjKUR32JL6e');
-				})();
-			</script>
-			<script type="text/javascript">
-				window.onload = function () {
-					document.getElementById('contact-form').addEventListener('submit', function (event) {
-						event.preventDefault();
-						// generate the contact number value
-						this.contact_number.value = Math.random() * 100000 | 0;
-
-						let templateparams = {
-							name: document.querySelector('#input-name').value,
-							email: document.querySelector('#input-email').value,
-							message: document.querySelector('#msg-input').value
-						}
-
-						emailjs.send('gmail', 'template_dZ2UCGgi', templateparams)
-							.then(function (response) {
-								// Show that message was successfully sent
-								document.getElementById('contact-form').reset();
-								document.getElementById('contact-submit').value = "Sent!";
-								document.getElementById('contact-submit').setAttribute('disabled', 'true')
-								setTimeout(() => {
-									document.getElementById('contact-submit').removeAttribute('disabled')
-								}, 2000)
-								document.getElementById('msg-input').classList.remove("expanded")
-							}, function (error) {
-								// Show Error
-								console.log('FAILED...', error);
-							});
-					});
-					document.getElementById('msg-input').addEventListener('click', e => {
-						e.preventDefault();
-						e.currentTarget.classList.add("expanded");
-					})
-				}
-			</script>
 			<section id="contact">
 				<div class="inner">
 					<form id="contact-form">
@@ -714,6 +595,127 @@
 	</div>
 
 	<!-- Scripts -->
+
+	<script>
+		(function ($) {
+
+			/*
+			 * TYPING ANIMATION
+			 */
+			let text = $(".changing-text");
+			if (text) {
+				const words = [
+					"building cool websites.",
+					"learning new things.",
+					"perfecting the details.",
+					"solving problems.",
+				];
+
+				// Typing characters
+				function printChar(word) {
+					let i = 0;
+					text = $(".changing-text");
+					text.html("");
+					let id = setInterval(
+						() => {
+							if (i >= word.length) {
+								deleteChar();
+								clearInterval(id);
+							} else {
+								text.html(text.html() + word[i]);
+								i++;
+							}
+						},
+						80
+					);
+				}
+
+				// Backspace
+				function deleteChar() {
+					text = $(".changing-text");
+					let word = text.html();
+					let i = word.length - 1;
+
+					let id = setInterval(
+						() => {
+							if (i >= 0) {
+								text.html(text.html().substring(0, text.html().length - 1));
+								i--;
+							} else {
+								printChar(words[iter.next().value]);
+								clearInterval(id);
+							}
+						},
+
+						90
+					);
+				}
+
+				// Iterate through words using generator function
+				function* initTyping() {
+					let index = 0;
+					while (true) {
+						yield index++;
+						if (index > 3) index = 0;
+					}
+				}
+				let iter = initTyping();
+				printChar(words[iter.next().value]);
+			}
+		})(jQuery);
+	</script>
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-163782526-1"></script>
+	<script>
+		window.dataLayer = window.dataLayer || [];
+
+		function gtag() {
+			dataLayer.push(arguments);
+		}
+		gtag('js', new Date());
+
+		gtag('config', 'UA-163782526-1');
+	</script>
+	<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@2.4.1/dist/email.min.js"></script>
+	<script type="text/javascript">
+		(function () {
+			emailjs.init('user_0Bx8qo3Bw7YjKUR32JL6e');
+		})();
+	</script>
+	<script type="text/javascript">
+		window.onload = function () {
+			document.getElementById('contact-form').addEventListener('submit', function (event) {
+				event.preventDefault();
+				// generate the contact number value
+				this.contact_number.value = Math.random() * 100000 | 0;
+
+				let templateparams = {
+					name: document.querySelector('#input-name').value,
+					email: document.querySelector('#input-email').value,
+					message: document.querySelector('#msg-input').value
+				}
+
+				emailjs.send('gmail', 'template_dZ2UCGgi', templateparams)
+					.then(function (response) {
+						// Show that message was successfully sent
+						document.getElementById('contact-form').reset();
+						document.getElementById('contact-submit').value = "Sent!";
+						document.getElementById('contact-submit').setAttribute('disabled', 'true')
+						setTimeout(() => {
+							document.getElementById('contact-submit').removeAttribute('disabled')
+						}, 2000)
+						document.getElementById('msg-input').classList.remove("expanded")
+					}, function (error) {
+						// Show Error
+						console.log('FAILED...', error);
+					});
+			});
+			document.getElementById('msg-input').addEventListener('click', e => {
+				e.preventDefault();
+				e.currentTarget.classList.add("expanded");
+			})
+		}
+	</script>
 	<script src="assets/js/jquery.scrolly.min.js"></script>
 	<script src="assets/js/jquery.scrollex.min.js"></script>
 	<script src="assets/js/browser.min.js"></script>
