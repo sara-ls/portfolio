@@ -80,15 +80,103 @@
 	}
 }
 
-#about {
-	background-color: #323753;
-
-
-}
 
 #about p>span {
 
 	display: inline-block;
 	margin-top: 4px;
 
+}
+
+img#me {
+	margin: 50px 72px 50px 50px;
+	/* margin-bottom: 20px; */
+	width: 300px;
+	height: 100%;
+
+	border: 2px solid white;
+	z-index: 20;
+}
+
+#about {
+	background-color: #7f98d2;
+
+	padding-bottom: 20px;
+}
+
+#about>.inner {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+}
+
+#about .right,
+#about header {
+	margin: 72px;
+}
+
+#about ul.actions {
+	/* margin-bottom: 20px; */
+	float: right;
+}
+
+@media all and (max-width: 1200px) {
+
+
+	img#me {
+		margin: 50px;
+		width: 250px;
+		height: 100%;
+	}
+
+	#about .right,
+	#about header {
+		margin: 40px;
+	}
+
+}
+
+@media all and (max-width: 900px) {
+
+
+	img#me {
+		width: 210px;
+		margin: 20px;
+	}
+
+
+}
+
+@media all and (max-width: 700px) {
+	#about>.inner {
+		flex-direction: column-reverse;
+	}
+
+	img#me {
+		margin: 0px;
+		width: 200px;
+		align-self: center;
+
+		justify-self: flex-start;
+	}
+
+#about .right,
+	#about header {
+		margin: 0px;
+	}
+}
+
+
+@media all and (max-width: 450px) {
+
+	#about ul.actions li:first-child {
+		display: none;
+	}
+
+	
+
+	#about>.inner>div {
+			margin: 0px;
+	}
 }
