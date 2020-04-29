@@ -105,7 +105,7 @@
 }
 
 #banner.major {
-  min-height: 100vh;
+  min-height: calc(100vh + 2.75em);
   height: 600px;
 }
 
@@ -155,7 +155,6 @@ body.is-preload #banner>.inner {
     padding: 5em 0 1em 0;
     height: auto;
     /* margin-bottom: -2.75em; */
-    max-height: none;
     min-height: 0;
     /* top: -2.75em; */
   }
@@ -179,7 +178,7 @@ body.is-preload #banner>.inner {
   }
 
   #banner.major {
-    min-height: 100vh;
+    /* min-height: 100vh; */
     max-height: none;
   }
 
@@ -199,9 +198,6 @@ body.is-preload #banner>.inner {
 }
 
 @media screen and (max-width: 480px) {
-  #banner ul.actions li:first-child {
-    display: none;
-  }
 
   #banner {
     padding: 6em 0 2em 0;

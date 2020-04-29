@@ -89,7 +89,7 @@
 }
 
 img#me {
-	margin: 50px 72px 50px 50px;
+	margin: 50px 0px 50px 50px;
 	/* margin-bottom: 20px; */
 	width: 300px;
 	height: 100%;
@@ -102,6 +102,8 @@ img#me {
 	background-color: #7f98d2;
 
 	padding-bottom: 20px;
+	border-top: 1px solid white;
+	border-bottom: 1px solid white;
 }
 
 #about>.inner {
@@ -113,7 +115,7 @@ img#me {
 
 #about .right,
 #about header {
-	margin: 72px;
+	margin-right: 50px;
 }
 
 #about ul.actions {
@@ -125,14 +127,13 @@ img#me {
 
 
 	img#me {
-		margin: 50px;
 		width: 250px;
 		height: 100%;
 	}
 
 	#about .right,
 	#about header {
-		margin: 40px;
+		margin-right: 40px;
 	}
 
 }
@@ -154,7 +155,7 @@ img#me {
 	}
 
 	img#me {
-		margin: 0px;
+		margin-bottom: 20px;
 		width: 200px;
 		align-self: center;
 
@@ -163,7 +164,7 @@ img#me {
 
 #about .right,
 	#about header {
-		margin: 0px;
+		margin-right: 0px;
 	}
 }
 
