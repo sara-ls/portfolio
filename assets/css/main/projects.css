@@ -4,10 +4,6 @@
   border-top: 0 !important;
 }
 
-.spotlights+* {
-  border-top: 0 !important;
-}
-
 .spotlights>section {
   display: -moz-flex;
   display: -webkit-flex;

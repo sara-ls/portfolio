@@ -2322,13 +2322,11 @@ table.alt tfoot {
 
 /* Main */
 
-#main {
+#main #projects{
   background-color: #2a2f4a;
 }
 
-#main>* {
-  border-top: solid 1px rgba(212, 212, 255, 0.1);
-}
+
 
 #main>*:first-child {
   border-top: 0;

@@ -90,20 +90,15 @@
 
 img#me {
 	margin: 50px 0px 50px 50px;
-	/* margin-bottom: 20px; */
-	width: 300px;
+	width: 330px;
 	height: 100%;
-
 	border: 2px solid white;
 	z-index: 20;
 }
 
 #about {
 	background-color: #7f98d2;
-
 	padding-bottom: 20px;
-	border-top: 1px solid white;
-	border-bottom: 1px solid white;
 }
 
 #about>.inner {
@@ -115,25 +110,21 @@ img#me {
 
 #about .right,
 #about header {
-	margin-right: 50px;
+	margin-right: 70px;
 }
 
 #about ul.actions {
-	/* margin-bottom: 20px; */
 	float: right;
 }
 
 @media all and (max-width: 1200px) {
-
-
 	img#me {
-		width: 250px;
-		height: 100%;
+		width: 280px;
 	}
 
 	#about .right,
 	#about header {
-		margin-right: 40px;
+		margin-right: 50px;
 	}
 
 }
@@ -142,7 +133,7 @@ img#me {
 
 
 	img#me {
-		width: 210px;
+		width: 250px;
 		margin: 20px;
 	}
 
@@ -180,4 +171,9 @@ img#me {
 	#about>.inner>div {
 			margin: 0px;
 	}
+}
+
+section#about , #main > section#skills{
+	border-top: 1px solid white;
+	border-bottom: 1px solid white;
 }
