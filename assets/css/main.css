@@ -91,7 +91,7 @@
 img#me {
 	margin: 50px 0px 50px 50px;
 	width: 330px;
-	height: 480px;
+	height: 100%;
 	border: 2px solid white;
 	z-index: 20;
 }
@@ -120,7 +120,7 @@ img#me {
 @media all and (max-width: 1200px) {
 	img#me {
 		width: 280px;
-		height: 407px;
+		height: 100%;
 	}
 
 	#about .right,
@@ -135,7 +135,7 @@ img#me {
 
 	img#me {
 		width: 250px;
-		height: 364px;
+		height: 100%;
 		margin: 20px;
 	}
 
