@@ -90,8 +90,10 @@
 
 img#me {
 	margin: 50px 0px 50px 50px;
-	width: 330px;
-	height: 100%;
+	max-width: 330px;
+	max-height: 480px;
+	width: auto;
+	height: auto;
 	border: 2px solid white;
 	z-index: 20;
 }
@@ -119,8 +121,8 @@ img#me {
 
 @media all and (max-width: 1200px) {
 	img#me {
-		width: 280px;
-		height: 100%;
+		max-width: 280px;
+/* 		height: 100%; */
 	}
 
 	#about .right,
@@ -134,8 +136,8 @@ img#me {
 
 
 	img#me {
-		width: 250px;
-		height: 100%;
+		max-width: 250px;
+/* 		height: 100%; */
 		margin: 20px;
 	}
 
@@ -149,8 +151,8 @@ img#me {
 
 	img#me {
 		margin-bottom: 20px;
-		width: 200px;
-		height: 291px;
+		max-width: 200px;
+		max-height: 291px;
 		align-self: center;
 
 		justify-self: flex-start;
@@ -165,8 +167,8 @@ img#me {
 
 @media all and (max-width: 450px) {
 	img#me {
-		width: 190px;
-		height: 276px;
+		max-width: 190px;
+		max-height: 276px;
 	}
 	#about ul.actions li:first-child {
 		display: none;
