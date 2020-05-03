@@ -1,6 +1,6 @@
 # My Portfolio
 
-[sarasampson.com](https://www.sarasampson.com/)
+[sarasampson.com](https://sarasampson.com/)
 
 ## Outline
 
